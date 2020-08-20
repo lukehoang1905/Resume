@@ -1,25 +1,64 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import { Container, Row, Col } from "react-bootstrap";
+import CvCard from "./components/CvCard";
+import PersonalCard from "./components/PersonalCard";
+import RightPanel from "./components/RightPanel";
+import SkillProgress from "./components/SkillProgress";
+import ExperienceCard from "./components/ExperienceCard";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Container>
+        {/* <NavBar /> THIS WILL BE MADE INTO SIDEMENU */}
+        <div className="text-center">H i ! : 3</div>
+        <Container id="dashboard">
+          <Row className="d-lg-block">
+            <Col lg="9" className="float-left " id="upper-left-pannel">
+              <Row>
+                <Col
+                  className="text-center"
+                  lg="4"
+                  // style={{ border: "1px solid black" }}
+                >
+                  <PersonalCard />
+                </Col>
+                <Col
+                  id="portfolio"
+                  lg="8"
+                  // style={{ border: "1px solid black" }}
+                >
+                  <CvCard />
+                </Col>
+              </Row>
+            </Col>
+            <RightPanel />
+            <Col lg="9" className="float-left " id="lower-left-pannel">
+              <Row>
+                <Col
+                  lg="6"
+                  // style={{ border: "1px solid black" }}
+                  // style={{ background: "#2e2e2e" }}
+                  id="skill-card"
+                >
+                  <SkillProgress />
+                </Col>
+                <Col
+                  lg="6"
+                  style={{ border: "1px solid whitesmoke" }}
+                  id="experience-card"
+                >
+                  <ExperienceCard />
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Container>
+      </Container>
+    </>
   );
 }
 

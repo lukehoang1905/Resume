@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+#upper-left-pannel {
+  height: 52vh;
+}
+.personal-card {
+  max-height: 50vh;
+  font-family: sans-serif;
+  cursor: pointer;
+  transition: 0.8s;
+}
+.personal-card:hover {
+  transform: scale(1.03);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#portfolio {
+  max-height: 51vh;
+  overflow: scroll;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* left-lower */
+#skill-card {
+  /* height: 35vh; */
+  background: linear-gradient(360deg, #dee1e1 10%, #f4f4f4 60%);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* #experience {
+  height: 35vh;
+  border: 1px solid black;
+} */
+#right-pannel {
+  border: 1px solid green;
+  height: 95vh;
 }
-
-.App-link {
-  color: #61dafb;
+#upper-right {
+  margin-top: 2vh;
+  height: 35vh;
+  overflow: scroll;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#lower-right {
+  margin-top: 2vh;
+  height: 53vh;
+  overflow: scroll;
+}
+#end-of-card {
+  height: 5vh;
+  opacity: 0.5;
+  background-image: linear-gradient(to top, #17a2bb, rgb(73, 193, 214));
+}
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
