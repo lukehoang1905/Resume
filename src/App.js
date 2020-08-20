@@ -1,20 +1,19 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Navbar } from "react-bootstrap";
 import CvCard from "./components/CvCard";
 import PersonalCard from "./components/PersonalCard";
 import RightPanel from "./components/RightPanel";
 import SkillProgress from "./components/SkillProgress";
 import ExperienceCard from "./components/ExperienceCard";
-
-
+// import NavBar from "./components/NavBar";
 function App() {
   return (
     <>
       <Container>
         {/* <NavBar /> THIS WILL BE MADE INTO SIDEMENU */}
-        <div className="text-center">H i ! : 3</div>
+        <div className="text-center">M y D a s h </div>
         <Container id="dashboard">
           <Row className="d-lg-block">
             <Col lg="9" className="float-left " id="upper-left-pannel">
@@ -35,7 +34,9 @@ function App() {
                 </Col>
               </Row>
             </Col>
-            <RightPanel />
+            <Col lg="3" className="float-right" id="right-pannel">
+              <RightPanel />
+            </Col>
             <Col lg="9" className="float-left " id="lower-left-pannel">
               <Row>
                 <Col

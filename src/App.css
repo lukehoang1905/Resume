@@ -31,24 +31,23 @@
   border: 1px solid black;
 } */
 #right-pannel {
-  border: 1px solid green;
-  height: 95vh;
+  border: 1px solid whitesmoke;
+  max-height: 95vh;
 }
 #upper-right {
   margin-top: 2vh;
-  height: 35vh;
+  max-height: 35vh;
   overflow: scroll;
 }
 #lower-right {
+  max-height: 45vh;
+}
+#lower-right-content {
   margin-top: 2vh;
-  height: 53vh;
+  max-height: 39vh;
   overflow: scroll;
 }
-#end-of-card {
-  height: 5vh;
-  opacity: 0.5;
-  background-image: linear-gradient(to top, #17a2bb, rgb(73, 193, 214));
-}
+
 ::-webkit-scrollbar {
   width: 0px; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */

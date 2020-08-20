@@ -1,28 +1,71 @@
-import React from "react";
-import { Col } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Col, Badge, Container } from "react-bootstrap";
+import "./RightPanel.css";
+const motivation = [
+  " crititcal problem-solving",
+  " pro-active learner",
+  " teamwork skills",
+  " achievement driven",
+  " innovatity adaptive",
+  " creativity mind",
+  " social responsibility ",
+];
+const effective = ["effectively", "efficently", "perfectly"];
 
 const RightPanel = () => {
+  const [motivationNumber, setMotivationNumber] = useState(0);
+  const [effectiveNumber, setEffectiveNumber] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setMotivationNumber(Math.floor(Math.random() * 5) + 1);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setEffectiveNumber(Math.floor(Math.random() * 2) + 1);
+    }, 6700);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
-      <Col lg="3" className="float-right" id="right-pannel">
-        <div  id="upper-right">
-          <h1>upper-right</h1>
-          <h2>this to check shorter</h2>
-          <h1>asdad</h1>
+      <Container>
+        <div id="upper-right">
+          <h3>About me</h3>
+          <p>
+            My high performance attributes are best described as
+            <span className="motivation">
+              {motivation[motivationNumber]}
+            </span>{" "}
+            At work, I am dedicated to{" "}
+            <span className="effective">{effective[effectiveNumber]}</span>{" "}
+            fulfill my role and responsibilities.
+          </p>
         </div>
-        <div  id="lower-right">
-          <h1>lower-right</h1>
-          <h2>this to check longer</h2>
-          <h2>this to check longer</h2>
-          <h2>this to check longer</h2>
-          <h2>this to check longer</h2>
-          <h2>this to check longer</h2>
-          <h2>this to check longer</h2>
-          <h2>this to check longer</h2>
-          <h2>final</h2>
-          <div id="end-of-card"></div>
+        <div id="lower-right">
+          <h3>Attributes</h3>
+          <div id="lower-right-content">
+            <h5>crititcal problem-solving</h5>
+            <h2>pro-active learner</h2>
+            <h4>teamwork skills</h4>
+            <h4>achievement driven</h4>
+            <h1>innovatity adaptive</h1>
+            <h2>creativity mind</h2>
+            <h7>social responsibility</h7>
+          </div>
         </div>
-      </Col>
+        <div id="end-of-card">
+          <h3 className="bg-info">My Contact</h3>
+          <div className="logos d-flex justify-content-between">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-github"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-instagram"></a>
+          </div>
+        </div>
+      </Container>
     </>
   );
 };
