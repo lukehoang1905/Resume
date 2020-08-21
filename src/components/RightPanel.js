@@ -12,7 +12,7 @@ const motivation = [
 ];
 const effective = ["effectively", "efficently", "perfectly"];
 
-const RightPanel = () => {
+const RightPanel = ({ openNewTab }) => {
   const [motivationNumber, setMotivationNumber] = useState(0);
   const [effectiveNumber, setEffectiveNumber] = useState(0);
   useEffect(() => {
@@ -59,22 +59,29 @@ const RightPanel = () => {
           <h3 className="bg-info">My Contact</h3>
           <div className="logos d-flex justify-content-between">
             <a
-              href="https://www.facebook.com/GrillardinT"
+              onClick={() => openNewTab("https://www.facebook.com/GrillardinT")}
               class="fa fa-facebook"
             ></a>
             <a
-              href="https://www.linkedin.com/in/lukehoang195/"
+              onClick={() =>
+                openNewTab("https://www.linkedin.com/in/lukehoang195/")
+              }
               class="fa fa-linkedin"
             ></a>
             <a
-              href="https://gist.github.com/lukehoang1905"
+              onClick={() =>
+                openNewTab("https://gist.github.com/lukehoang1905")
+              }
               class="fa fa-github"
             ></a>
-            <a href="lukehoang@gmail.com" class="fa fa-google"></a>
             <a
-              href="https://www.instagram.com/_tuong.ot_/?hl=en"
-              class="fa fa-instagram"
+              onClick={() => openNewTab("lukehoang@gmail.com")}
+              class="fa fa-google"
             ></a>
+            <a class="fa fa-instagram">
+              onClick=
+              {() => openNewTab("https://www.instagram.com/_tuong.ot_/?hl=en")}{" "}
+            </a>
           </div>
         </div>
       </Container>
