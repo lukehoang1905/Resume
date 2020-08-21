@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Col, Badge, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import "./RightPanel.css";
 const motivation = [
   " crititcal problem-solving",
@@ -58,11 +58,23 @@ const RightPanel = () => {
         <div id="end-of-card">
           <h3 className="bg-info">My Contact</h3>
           <div className="logos d-flex justify-content-between">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-linkedin"></a>
-            <a href="#" class="fa fa-github"></a>
-            <a href="#" class="fa fa-google"></a>
-            <a href="#" class="fa fa-instagram"></a>
+            <a
+              href="https://www.facebook.com/GrillardinT"
+              class="fa fa-facebook"
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/lukehoang195/"
+              class="fa fa-linkedin"
+            ></a>
+            <a
+              href="https://gist.github.com/lukehoang1905"
+              class="fa fa-github"
+            ></a>
+            <a href="lukehoang@gmail.com" class="fa fa-google"></a>
+            <a
+              href="https://www.instagram.com/_tuong.ot_/?hl=en"
+              class="fa fa-instagram"
+            ></a>
           </div>
         </div>
       </Container>

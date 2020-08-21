@@ -2,12 +2,10 @@ import React from "react";
 import { Container, Image, Button, Row, Col } from "react-bootstrap";
 import "./ExperienceCard.css";
 
-const ExperienceCard = () => {
-  const openNewTab = () => {
-    const url =
+const ExperienceCard = ({openNewTab}) => {
+  const url =
       "https://drive.google.com/file/d/1CUndUamDghwfEeIw9j74yvAy0LT49FM9/view";
-    window.open(url, "_blank");
-  };
+  
   return (
     <>
       <Container className="experience-card">
@@ -34,7 +32,7 @@ const ExperienceCard = () => {
               </Col>
             </Row>
 
-            <Button onClick={() => openNewTab()}>To Resume</Button>
+            <Button onClick={() => openNewTab(url)}>To Resume</Button>
           </div>
         </div>
       </Container>

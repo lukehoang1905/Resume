@@ -9,6 +9,10 @@ import SkillProgress from "./components/SkillProgress";
 import ExperienceCard from "./components/ExperienceCard";
 // import NavBar from "./components/NavBar";
 function App() {
+  const openNewTab = (url) => {
+    
+    window.open(url, "_blank");
+  };
   return (
     <>
       <Container>
@@ -30,12 +34,12 @@ function App() {
                   lg="8"
                   // style={{ border: "1px solid black" }}
                 >
-                  <CvCard />
+                  <CvCard openNewTab={openNewTab}/>
                 </Col>
               </Row>
             </Col>
             <Col lg="3" className="float-right" id="right-pannel">
-              <RightPanel />
+              <RightPanel openNewTab={openNewTab}/>
             </Col>
             <Col lg="9" className="float-left " id="lower-left-pannel">
               <Row>
@@ -52,7 +56,7 @@ function App() {
                   style={{ border: "1px solid whitesmoke" }}
                   id="experience-card"
                 >
-                  <ExperienceCard />
+                  <ExperienceCard openNewTab={openNewTab}/>
                 </Col>
               </Row>
             </Col>
